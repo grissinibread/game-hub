@@ -23,13 +23,11 @@ function App() {
           <NavBar />
         </GridItem>
 
-        <GridItem area={"aside"} bg={"gold"} hideBelow={breakpoints.lg}>
+        <GridItem area={"aside"} hideBelow={breakpoints.lg}>
           Aside
         </GridItem>
 
-        <GridItem area={"main"} bg={"dodgerblue"}>
-          Main
-        </GridItem>
+        <GridItem area={"main"}>Main</GridItem>
       </Grid>
     </>
   );
