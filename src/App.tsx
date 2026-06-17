@@ -1,4 +1,5 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
+import NavBar from "./components/NavBar";
 
 const breakpoints = {
   base: "0rem", // 0px
@@ -18,8 +19,8 @@ function App() {
           lg: `'nav nav' 'aside main'`,
         }}
       >
-        <GridItem area={"nav"} bg={"coral"}>
-          Nav
+        <GridItem area={"nav"}>
+          <NavBar />
         </GridItem>
 
         <GridItem area={"aside"} bg={"gold"} hideBelow={breakpoints.lg}>
