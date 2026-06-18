@@ -1,17 +1,27 @@
 import useGames from "@/hooks/useGames";
-import { Text } from "@chakra-ui/react";
+import { Image, SimpleGrid, Text } from "@chakra-ui/react";
+import GameCard from "./GameCard";
+import jong from "../assets/jong.jpg";
 
 const GameGrid = () => {
-  const { games, error} = useGames();
+  const { games, error } = useGames();
 
   return (
     <>
       {error && <Text>{error}</Text>}
-      <ul>
+      {/* need to add spacing=10px */}
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3}} gap={10} padding={10}>
         {games.map((g) => (
-          <li key={g.id}>{g.name}</li>
+          <GameCard key={g.id} game={g} />
         ))}
-      </ul>
+        <GameCard
+          game={{
+            background_image: jong,
+            name: "Escape Jong 3: You Can't",
+            id: 67,
+          }}
+        />
+      </SimpleGrid>
     </>
   );
 };
