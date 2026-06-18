@@ -10,7 +10,7 @@ const GameGrid = () => {
     <>
       {error && <Text>{error}</Text>}
       {/* need to add spacing=10px */}
-      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3}} gap={10} padding={10}>
+      <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} gap={10} padding={10}>
         {games.map((g) => (
           <GameCard key={g.id} game={g} />
         ))}
@@ -19,6 +19,15 @@ const GameGrid = () => {
             background_image: jong,
             name: "Escape Jong 3: You Can't",
             id: 67,
+            parent_platforms: [
+              {
+                platform: {
+                  id: 69,
+                  name: "Playstation",
+                  slug: "playstation",
+                },
+              },
+            ],
           }}
         />
       </SimpleGrid>
