@@ -11,6 +11,7 @@ import { BsNintendoSwitch, BsGlobe } from "react-icons/bs";
 import { Platform } from "@/hooks/useGames";
 import { HStack, Icon, Text } from "@chakra-ui/react";
 import { IconType } from "react-icons";
+import { LiaPoopSolid } from "react-icons/lia";
 
 interface Props {
   platforms: Platform[];
@@ -27,12 +28,13 @@ const PlatformIconList = ({ platforms }: Props) => {
     playstation: FaPlaystation,
     web: BsGlobe,
     xbox: FaXbox,
+    poop: LiaPoopSolid
   };
 
   return (
     <HStack marginY={1}>
       {platforms.map((p) => (
-        <Icon as={iconMap[p.slug]} color='gray.500' />
+        <Icon as={iconMap[p.slug]} key={p.id} color='gray.500' />
       ))}
     </HStack>
   );

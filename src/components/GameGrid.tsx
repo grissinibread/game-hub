@@ -23,11 +23,12 @@ const GameGrid = () => {
               {
                 platform: {
                   id: 69,
-                  name: "Playstation",
-                  slug: "playstation",
+                  name: "PoopStation",
+                  slug: "poop",
                 },
               },
             ],
+            metacritic: 67
           }}
         />
       </SimpleGrid>
