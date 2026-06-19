@@ -14,7 +14,7 @@ const GameGrid = () => {
         {games.map((g) => (
           <GameCard key={g.id} game={g} />
         ))}
-        <GameCard
+        {/* <GameCard
           game={{
             background_image: jong,
             name: "Escape Jong 3: You Can't",
@@ -30,7 +30,7 @@ const GameGrid = () => {
             ],
             metacritic: 67
           }}
-        />
+        /> */}
       </SimpleGrid>
     </>
   );
