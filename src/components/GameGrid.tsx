@@ -3,6 +3,7 @@ import { Image, SimpleGrid, Text } from "@chakra-ui/react";
 import GameCard from "./GameCard";
 import jong from "../assets/jong.jpg";
 import GameCardSkeleton from "./GameCardSkeleton";
+import GameCardContainer from "./GameCardContainer";
 
 const GameGrid = () => {
   const { games, error, isLoading } = useGames();
@@ -13,9 +14,16 @@ const GameGrid = () => {
       {error && <Text>{error}</Text>}
       {/* need to add spacing=10px */}
       <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} gap={10} padding={10}>
-        {isLoading && skeletons.map((s) => <GameCardSkeleton key={s} />)}
+        {isLoading &&
+          skeletons.map((s) => (
+            <GameCardContainer key={s}>
+              <GameCardSkeleton key={s} />
+            </GameCardContainer>
+          ))}
         {games.map((g) => (
-          <GameCard key={g.id} game={g} />
+          <GameCardContainer key={g.id}>
+            <GameCard key={g.id} game={g} />
+          </GameCardContainer>
         ))}
       </SimpleGrid>
     </>
