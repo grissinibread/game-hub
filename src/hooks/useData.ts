@@ -3,8 +3,8 @@ import { CanceledError } from "axios";
 import { useEffect, useState } from "react";
 
 interface FetchResponse<T> {
-    count: number;
-    results: T[];
+  count: number;
+  results: T[];
 }
 
 const useData = <T>(endpoint: string) => {
