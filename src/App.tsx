@@ -4,6 +4,7 @@ import GameGrid from "./components/GameGrid";
 import GenreList from "./components/GenreList";
 import { useState } from "react";
 import { Genre } from "./hooks/UseGenres";
+import PlatformSelector from "./components/PlatformSelector";
 
 const breakpoints = {
   base: "0rem", // 0px
@@ -38,6 +39,7 @@ function App() {
         </GridItem>
 
         <GridItem area={"main"}>
+          <PlatformSelector />
           <GameGrid selectedGenre={selectedGenre}/>
         </GridItem>
       </Grid>
